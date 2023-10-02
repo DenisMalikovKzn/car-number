@@ -45,11 +45,11 @@ public class Service {
             } else if (threeDigits(innerNumber)) {
                 innerNumberWithZero = String.valueOf(innerNumber);
             } else if (fourDigits(innerNumber)) {
-                int foundThirdLetter = getFoundLetter(theRest, 1);
+                int foundThirdLetter = getLetterIndex(theRest, 1);
                 if (foundThirdLetter != carLetters.length - 1) {
                     changeLetter(foundThirdLetter, theRestSb, 1);
                 } else {
-                    int foundSecondLetter = getFoundLetter(theRest, 0);
+                    int foundSecondLetter = getLetterIndex(theRest, 0);
                     changeLetter(foundSecondLetter, theRestSb, 0);
                 }
                 innerNumberWithZero = "000";
@@ -65,7 +65,7 @@ public class Service {
         theRestSb.setCharAt(index, carLetters[foundThirdLetter]);
     }
 
-    private int getFoundLetter(String theRest, int index) {
+    private int getLetterIndex(String theRest, int index) {
         char charNeededSecondLetter = theRest.charAt(index);
         return IntStream.range(0, carLetters.length)
                 .filter(i -> carLetters[i] == charNeededSecondLetter)
