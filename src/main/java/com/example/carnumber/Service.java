@@ -10,6 +10,8 @@ public class Service {
     private final char[] carLetters = {'А', 'В', 'Е', 'К', 'М', 'Н', 'О', 'Р', 'С', 'Т', 'У', 'Х'};
     private final int MIN_VALUE_NUMBER_CAR = 0;
     private final int MAX_VALUE_NUMBER_CAR = 10;
+
+    private static final int NINETY_NINE = 10;
     private static final String region = " 116 RUS";
     private final String str = new String(carLetters);
     private final List<String> listNumbers = new ArrayList<>();
@@ -33,7 +35,7 @@ public class Service {
         StringBuilder theRestSb = new StringBuilder(theRest);
         String innerNumberWithZero = null;
         int innerNumber = Integer.parseInt(innerNumberString);
-        if (innerNumber == 99) {
+        if (innerNumber == NINETY_NINE) {
             innerNumber++;
             innerNumberWithZero = String.valueOf(innerNumber);
         } else {
