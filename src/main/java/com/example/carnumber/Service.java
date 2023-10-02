@@ -11,7 +11,7 @@ public class Service {
     private final int MIN_VALUE_NUMBER_CAR = 0;
     private final int MAX_VALUE_NUMBER_CAR = 10;
 
-    private static final int NINETY_NINE = 10;
+    private static final int NINETY_NINE = 99;
     private static final String region = " 116 RUS";
     private final String str = new String(carLetters);
     private final List<String> listNumbers = new ArrayList<>();
